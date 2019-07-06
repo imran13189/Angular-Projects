@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imeshma.Core", "Imeshma.Core.csproj", "{0AC5AA83-D915-4556-A2C9-6E9C026636BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imeshma.DAL", "..\Imeshma.DAL\Imeshma.DAL.csproj", "{1E991AD0-C40F-4080-884F-170F30D6FE24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imeshma.Entities", "..\Imeshma.Entities\Imeshma.Entities.csproj", "{214E848C-8A0F-4AF8-AA75-B985E5D1CD0C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ImeshmaWeb", "..\ImeshmaWeb\", "{4844A361-7FAD-41D7-BEFA-135ADFDE779A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57165"
+		Debug.AspNetCompiler.PhysicalPath = "..\ImeshmaWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57165\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57165"
+		Release.AspNetCompiler.PhysicalPath = "..\ImeshmaWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57165\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57165"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AC5AA83-D915-4556-A2C9-6E9C026636BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC5AA83-D915-4556-A2C9-6E9C026636BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC5AA83-D915-4556-A2C9-6E9C026636BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC5AA83-D915-4556-A2C9-6E9C026636BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E991AD0-C40F-4080-884F-170F30D6FE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E991AD0-C40F-4080-884F-170F30D6FE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E991AD0-C40F-4080-884F-170F30D6FE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E991AD0-C40F-4080-884F-170F30D6FE24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214E848C-8A0F-4AF8-AA75-B985E5D1CD0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214E848C-8A0F-4AF8-AA75-B985E5D1CD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214E848C-8A0F-4AF8-AA75-B985E5D1CD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214E848C-8A0F-4AF8-AA75-B985E5D1CD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4844A361-7FAD-41D7-BEFA-135ADFDE779A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4844A361-7FAD-41D7-BEFA-135ADFDE779A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4844A361-7FAD-41D7-BEFA-135ADFDE779A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4844A361-7FAD-41D7-BEFA-135ADFDE779A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B6CB582-CF7D-4B74-9066-4769DD348C91}
+	EndGlobalSection
+EndGlobal

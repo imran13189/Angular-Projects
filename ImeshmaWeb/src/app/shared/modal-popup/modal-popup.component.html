@@ -1,0 +1,85 @@
+
+  <div class="modal-header">
+    <!--<h4 class="modal-title" id="modal-basic-title">Profile update</h4>-->
+    <button type="button" class="close" aria-label="Close" >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+      <div class="row no-gutters">
+
+        <div class="offset-lg-3 col-lg-3  p-3">
+          <a class="btn-fb" (click)="facebookLogin()">
+            <i class="fa fa-facebook-official"></i>
+            Facebook
+          </a>
+        </div>
+        <div class="col-lg-3 p-3">
+          <a class="btn-google" (click)="googleLogin()">
+            <img src="assets/img/icon-google.png" alt="GOOGLE">
+            Google
+          </a>
+        </div>
+      </div>
+
+      <div class="row no-gutters p-2">
+        <div class="offset-3 col-lg-9">
+          <span class="txt1">
+            Username
+          </span>
+        </div>
+        <div class="offset-lg-3 col-lg-6">
+          <input class="form-control" type="text"  formControlName="username">
+        </div>
+
+      </div>
+      <div class="row no-gutters p-2">
+        <div class="offset-3 col-lg-9">
+          <span class="txt1">
+            Password
+          </span>
+        </div>
+        <div class="offset-lg-3 col-lg-6">
+          <input class="form-control" type="password"  formControlName="password">
+        </div>
+
+      </div>
+
+      <div class="row no-gutters">
+        <div class="offset-lg-3 col-lg-3">
+          <div class="row no-gutters">
+            <div class="col-lg-2 p-2">
+              <input type="checkbox" class="form-control pull-left " id="rem">
+            </div>
+            <div class="col-lg-10">
+              <label for="rem"><span class="box"></span>Remember me</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 forgot-pass">
+          Forgot Password?
+        </div>
+      </div>
+
+      <div class="row no-gutters">
+        <div class="offset-lg-3 col-lg-3 p-2">
+          <button class="btn-login">
+            Sign In
+          </button>
+        </div>
+        <div class="col-lg-3 p-2">
+          <button class="btn-signup">
+            Sign Up
+          </button>
+        </div>
+      </div>
+
+      </form>
+
+
+  </div>
+  <!--<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>-->
+
