@@ -1,31 +1,37 @@
 <header class="header-section">
-  <div class="header-top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 header-top-left">
-          <div class="top-info">
-            <img alt="" class="mainlogo" src="assets/img/logo.png">
+  <div class="row">
+    
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+        
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-menu-icon" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbar-menu-icon">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#pk"><i class="nc-icon nc-email-85" aria-hidden="true"></i></a>
+              </li>
+              <li class="nav-item" [hidden]="userDetails">
+                <a class="nav-link" href="#" (click)="onClick()"><i class="nc-icon nc-single-02" aria-hidden="true" ></i>Log In</a>
+              </li>
+              <li class="nav-item" *ngIf="userDetails">
+                <div ngbDropdown class="dropdown" placement="bottom-left">
+                  <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle><i class="nc-icon nc-settings-gear-65" aria-hidden="true"></i>Imran</a>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-danger dropdown-menu-right">
+                    <a class="dropdown-item">Profile</a>
+                    <a class="dropdown-item">Setting</a>
+                    <a class="dropdown-item" (click)="onLogOut()">Log Out</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-          <!--<div class="top-info">
-            <i class="fa fa-envelope"></i>
-            info.leramiz@colorlib.com
-          </div>-->
         </div>
-        <div class="col-lg-6 text-lg-right header-top-right">
-          <div class="top-social">
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <a href=""><i class="fa fa-twitter"></i></a>
-            <a href=""><i class="fa fa-instagram"></i></a>
-            <a href=""><i class="fa fa-pinterest"></i></a>
-            <a href=""><i class="fa fa-linkedin"></i></a>
-          </div>
-          <div class="user-panel">
-            <a href=""><i class="fa fa-sign-in"></i> Post Property</a>
-            <a href="#" (click)="onClick()" ><i class="fa fa-user-circle-o"></i>Login </a>
-
-          </div>
-        </div>
-      </div>
+      </nav>
     </div>
   </div>
   

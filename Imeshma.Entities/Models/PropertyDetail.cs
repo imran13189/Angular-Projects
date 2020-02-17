@@ -1,4 +1,4 @@
-﻿using System;
+﻿x`using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,5 +17,18 @@ namespace Imeshma.Entities.Models
         [Column(TypeName = "varchar(max)")]
         [Display(Name = "Location")]
         public string Location { get; set; }
+
+        [Column(TypeName = "varchar(max)")]
+        [Display(Name = "Size")]
+        public string Size { get; set; }
+
+        
+        public int Bedroom { get; set; }
+
+        public int Balcony { get; set; }
+
+        public int ProjectType { get; set; }
+
+
     }
 }

@@ -17,14 +17,12 @@ export class LoginWizardComponent implements OnInit {
 
   googleLogin() {
     this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then((userData) => {
-      debugger;
       this.user = userData
     });
   }
 
   facebookLogin() {
     this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID).then((userData) => {
-      debugger;
       this.user = userData
     });
   }
@@ -43,13 +41,19 @@ export class LoginWizardComponent implements OnInit {
         } else {
           res.errors.forEach(element => {
             switch (element.code) {
+
               case 'DuplicateUserName':
+
                 this.toastr.error('Username is already taken','Registration failed.');
-                break;
+
+              break;
 
               default:
-              this.toastr.error(element.description,'Registration failed.');
-                break;
+
+                this.toastr.error(element.description,'Registration failed.');
+
+              break;
+
             }
           });
         }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Imeshma.DAL;
+using Imeshma.Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Imeshma.Core.Controllers
@@ -10,11 +12,22 @@ namespace Imeshma.Core.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        ImeshmaDbContext _context;
+
+        public ValuesController(ImeshmaDbContext context)
+        {
+            _context =context;
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<PropertyDetail>> Get()
         {
-            return new string[] { "value1", "value2" };
+            //while (true)
+            //{
+            //    _context.PropertyDetail.Add(new PropertyDetail() { Location = "Test", Size = "25" });
+            //    _context.SaveChanges();
+            //}
+            return _context.PropertyDetail;
         }
 
         // GET api/values/5
@@ -41,5 +54,7 @@ namespace Imeshma.Core.Controllers
         public void Delete(int id)
         {
         }
+
+       
     }
 }

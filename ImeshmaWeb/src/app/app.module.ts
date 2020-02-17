@@ -19,14 +19,17 @@ import { UserService } from './services/user.service';
 import { AuthinterceptorService } from './auth/authinterceptor.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReportsComponent } from './reports/reports.component';
+import { AgGridModule } from "@ag-grid-community/angular";
 
 const config = new AuthServiceConfig([{
   id: GoogleLoginProvider.PROVIDER_ID,
-  provider: new GoogleLoginProvider('1000636081073-gfhdpghgfji3m3uk3p26qpv8hncc1ob6.apps.googleusercontent.com')
+  provider: new GoogleLoginProvider('223067339264-rh1atupciklsdujub6pbrbbfm2jt2t1h.apps.googleusercontent.com')
 },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider('224344228440102')
+    provider: new FacebookLoginProvider('171062060848370')
   }
 ], false);
 
@@ -45,7 +48,8 @@ export function provideConfig(){
     PropertiesSectionComponent,
     FeatureSectionComponent,
     ModalPopupComponent,
-    LoginWizardComponent
+    LoginWizardComponent,
+    ReportsComponent
   ],
   imports: [
     HttpClientModule,
@@ -56,9 +60,12 @@ export function provideConfig(){
     FormWizardModule,
     SocialLoginModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    AgGridModule.withComponents([]),
     ToastrModule.forRoot({
       progressBar: true
-    }) 
+    }),
+   
   ],
   providers: [
     { provide: AuthServiceConfig, useFactory: provideConfig },
